@@ -77,6 +77,18 @@ the _app.tsx file will
 
 Any forms that we have on our site can be created with the `useGithubJsonForm` or `useGithubMarkdownForm` helpers. These helpers will fetch and post data through the GitHub API via the GithubClient we registered in _app.tsx.
 
+-------------------------
+
+1. Create a new GitHub OAuth App pointing to your Vercel deployment instead of localhost. 
+
+https://tina.io/guides/nextjs/github/hosting-vercel/
+
+
+
+
+
+
+
 
 
 
