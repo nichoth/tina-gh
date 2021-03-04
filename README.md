@@ -41,7 +41,35 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 https://tina.io/guides/nextjs/github/initial-setup/
 
 
+[Set up the GitHub OAuth App](https://tina.io/guides/nextjs/github/github-oauth-app/)
+
+* set up an OAuth App in Github
+* go to https://github.com/settings/developers and 'create a new oauth app'.
+
+Since you are testing your app locally, you'll create a development GitHub app that redirects to localhost. Eventually you'll need to create separate OAuth Apps: one for development and a production app whose URLs will connect to the live domain.
 
 
+* set env variables
+* generate a random key for sever-side signing `openssl rand -base64 32`
+  and set it in your .env file
+```
+# The signing key used for token encryption
+SIGNING_KEY=`
+```
+
+* Create `next.config.js` in the project root, and add vars to it, but not `SIGNING_KEY` -- that is only for server side
+
+* now make some API function to handle editing
+* the `pages/api` directory is magic, and any files there are turned into API endpoints
+
+### make an auth redirect page
+
+`pages/_app.tsx` is a magic file name in Next.js. Allows us to configure a 'custom app'.
+
+
+the _app.tsx file will
+
+* Wrap the Page with `TinacmsGithubProvider`: This component is given config and callbacks that hit our /api server functions to enable Preview/Edit Mode after authentication is complete.
+* Add a button for entering Preview/Edit Mode: We must provide a means of triggering authentication to enter/exit edit mode. This a simple example of how to do so.
 
 
