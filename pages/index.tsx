@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { getGithubPreviewProps, parseJson } from 'next-tinacms-github'
+import { GetStaticProps } from 'next'
 
-export default function Home() {
+export default function Home({ file }) {
+  const data = file.data
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,7 +15,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          {data.title}
         </h1>
 
         <p className={styles.description}>
