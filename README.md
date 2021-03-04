@@ -73,3 +73,10 @@ the _app.tsx file will
 * Add a button for entering Preview/Edit Mode: We must provide a means of triggering authentication to enter/exit edit mode. This a simple example of how to do so.
 
 
+### need to create a form to edit content
+
+Any forms that we have on our site can be created with the `useGithubJsonForm` or `useGithubMarkdownForm` helpers. These helpers will fetch and post data through the GitHub API via the GithubClient we registered in _app.tsx.
+
+
+
+
