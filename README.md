@@ -38,6 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## setup GH Oauth
 
+https://tina.io/guides/nextjs/github/initial-setup/
 
 
 
